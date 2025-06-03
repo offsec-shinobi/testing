@@ -1,0 +1,4 @@
+Import-Module ActiveDirectory
+Get-ADUser -Filter * | Select-Object Name,Enabled
+Get-ADGroup -Filter * | Select-Object Name
+Get-ADGroupMember "Domain Users"
